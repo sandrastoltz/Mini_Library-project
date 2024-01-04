@@ -1,2 +1,2 @@
 "use strict";
-let number = 100;
+let number = 1;
