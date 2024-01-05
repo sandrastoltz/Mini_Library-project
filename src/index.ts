@@ -87,24 +87,30 @@ function bookInfo(book: Book) {
             infoDiv.textContent = '';
 
             let h2 = document.createElement('h2');
-            h2.classList.add('info-book-title');
+            h2.classList.add('info_book_title');
             h2.textContent = book.title;
             infoDiv.appendChild(h2);
 
             let h3 = document.createElement('h3');
-            h3.classList.add('info-book-author');
+            h3.classList.add('info_book_author');
             h3.textContent = book.author;
             infoDiv.appendChild(h3);
 
+            let p = document.createElement('p');
+            p.classList.add('info_book_plot');
+            p.textContent = book.plot;
+            infoDiv.appendChild(p);
+
             let div = document.createElement('div');
+            div.classList.add('info_div_box');
             let section1 = document.createElement('section');
             let p1 = document.createElement('p');
             let p2 = document.createElement('p');
             
             p1.textContent = 'Audience: ' + book.audience;
-            p1.classList.add('info-book-audience');
+            p1.classList.add('info_book_audience');
             p2.textContent = 'First published: ' + book.year;
-            p2.classList.add('info-book-year');
+            p2.classList.add('info_book_year');
             
             section1.appendChild(p1);
             section1.appendChild(p2);
@@ -115,9 +121,9 @@ function bookInfo(book: Book) {
             let p4 = document.createElement('p');
             
             p3.textContent = 'Pages: ' + book.pages;
-            p3.classList.add('info-book-pages');
+            p3.classList.add('info_book_pages');
             p4.textContent = 'Publisher: ' + book.publisher;
-            p4.classList.add('info-book-publisher');
+            p4.classList.add('info_book_publisher');
             
             section2.appendChild(p3);
             section2.appendChild(p4);
